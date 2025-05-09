@@ -14,7 +14,7 @@ if sys.version_info < (3, 6):
 
 setup(
     name="wordnet_db_migrator",
-    version="0.2.3",
+    version="1.0.0",
     description="A utility to migrate WordNet database from SQLite to PostgreSQL",
     url="https://github.com/onareach/wordnet_db_migrator",
     author="David Long",

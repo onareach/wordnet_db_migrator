@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wordnet_db_migrator"
-version = "0.2.3"
+version = "1.0.0"
 description = "A utility to migrate WordNet database from SQLite to PostgreSQL"
 authors = [
     {name = "David Long", email = "davidlong@unr.edu"}
