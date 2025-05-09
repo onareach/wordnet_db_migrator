@@ -1,0 +1,110 @@
+name: Basic Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: System information
+      run: |
+        echo "Operating system: $(uname -a)"
+        echo "GitHub workspace: $GITHUB_WORKSPACE"
+        echo "GitHub ref: $GITHUB_REF"
+        echo "GitHub event name: $GITHUB_EVENT_NAME"
+        echo "Runner OS: $RUNNER_OS"
+        echo "Python location: $(which python)"
+        python --version
+    
+    - name: Create and activate virtual environment
+      run: |
+        python -m venv venv
+        echo "Created virtual environment"
+        source venv/bin/activate
+        echo "Activated virtual environment"
+        echo "Python path: $(which python)"
+        echo "Pip path: $(which pip)"
+        python --version
+        
+    - name: Install basic dependencies
+      run: |
+        source venv/bin/activate
+        python -m pip install --upgrade pip
+        pip install setuptools wheel
+        # Explicitly install psycopg2-binary (not psycopg2)
+        pip install psycopg2-binary
+        pip install pyyaml
+        # Ensure pytest is installed for testing
+        pip install pytest
+        
+        # Install the package in development mode
+        pip install -e .
+        echo "Installed packages in virtual environment:"
+        pip list
+        
+    - name: Check project structure
+      run: |
+        source venv/bin/activate
+        echo "Current directory: $(pwd)"
+        ls -la
+        echo "Python version: $(python --version)"
+        echo "Python executable: $(readlink -f $(which python))"
+        echo "PYTHONPATH: $PYTHONPATH"
+        echo "Files in current directory:"
+        ls -la
+        
+        # Check for key files
+        key_files=("__init__.py" "config.py" "main.py" "bootstrap.py" "cli.py")
+        for file in "${key_files[@]}"; do
+          if [ -f "$file" ]; then
+            echo "✅ Found key file: $file"
+          else
+            echo "❌ Missing key file: $file"
+          fi
+        done
+        
+    - name: Test basic imports
+      env:
+        PYTHONUNBUFFERED: 1  # Ensure Python output is not buffered
+      run: |
+        source venv/bin/activate
+        # Create logs directory with explicit permissions
+        mkdir -p logs
+        chmod 777 logs
+        
+        echo "Checking if main module can be imported"
+        python -c "import wordnet_db_migrator; print(f'✅ Successfully imported wordnet_db_migrator (version: {wordnet_db_migrator.__version__})')" > logs/import_test.log 2>&1
+        
+        # Try importing other key modules
+        python -c "import wordnet_db_migrator.config; print('✅ Successfully imported wordnet_db_migrator.config')" >> logs/import_test.log 2>&1
+        python -c "import wordnet_db_migrator.bootstrap; print('✅ Successfully imported wordnet_db_migrator.bootstrap')" >> logs/import_test.log 2>&1
+        python -c "import wordnet_db_migrator.cli; print('✅ Successfully imported wordnet_db_migrator.cli')" >> logs/import_test.log 2>&1
+        
+        # Display the log content
+        echo "Contents of import_test.log:"
+        cat logs/import_test.log
+        
+        # List files to verify log file exists
+        echo "Files in current directory:"
+        ls -la
+        echo "Files in logs directory:"
+        ls -la logs/
+        
+    - name: Upload test logs
+      if: always()  # Upload logs even if the tests fail
+      uses: actions/upload-artifact@v4
+      with:
+        name: basic-check-logs
+        path: logs
