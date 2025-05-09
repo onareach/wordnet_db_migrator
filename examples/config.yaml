@@ -1,0 +1,35 @@
+# WordNet Porter Example Configuration
+
+# Database Settings
+databases:
+  sqlite:
+    # Path to the WordNet SQLite database
+    path: "/path/to/wordnet/sqlite/database.db"
+  postgres:
+    # PostgreSQL connection settings
+    host: "localhost"
+    port: 5432
+    database: "wordnet"
+    # Credentials will be prompted for if not provided
+    user: null
+    password: null
+
+# Output Settings
+output:
+  # Directory for generated files
+  directory: "./output"
+  # Logging level (debug, info, warning, error, critical)
+  log_level: "info"
+  # Whether to show logs in the console
+  show_console_logs: false
+  # Whether to show the database name in each step
+  show_db_name: false
+
+# Application Settings
+application:
+  # Batch size for data processing
+  batch_size: 1000
+  # Whether to skip confirmation prompts
+  force_mode: false
+  # Maximum number of login attempts
+  max_login_attempts: 3
