@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A utility to migrate WordNet SQLite database to PostgreSQL">
+        <meta name="description" content="A utility to migrate WordNet database from SQLite to PostgreSQL">
       
       
         <meta name="author" content="onareach">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Installation - WordNet Porter</title>
+        <title>Installation - WordNet DB Migrator</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="WordNet Porter" class="md-header__button md-logo" aria-label="WordNet Porter" data-md-component="logo">
+    <a href=".." title="WordNet DB Migrator" class="md-header__button md-logo" aria-label="WordNet DB Migrator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            WordNet Porter
+            WordNet DB Migrator
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -169,13 +169,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/onareach/wordnet-porter" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/onareach/wordnet-db-migrator" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    onareach/wordnet-porter
+    onareach/wordnet-db-migrator
   </div>
 </a>
       </div>
@@ -205,23 +205,23 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="WordNet Porter" class="md-nav__button md-logo" aria-label="WordNet Porter" data-md-component="logo">
+    <a href=".." title="WordNet DB Migrator" class="md-nav__button md-logo" aria-label="WordNet DB Migrator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    WordNet Porter
+    WordNet DB Migrator
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/onareach/wordnet-porter" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/onareach/wordnet-db-migrator" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    onareach/wordnet-porter
+    onareach/wordnet-db-migrator
   </div>
 </a>
     </div>
@@ -666,7 +666,7 @@
 
 
 <h1 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">&para;</a></h1>
-<p>This guide provides detailed instructions for installing WordNet Porter.</p>
+<p>This guide provides detailed instructions for installing WordNet DB Migrator.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Python 3.6 or higher</li>
@@ -676,30 +676,30 @@
 <li><strong>psycopg2-binary</strong>: The application specifically requires the <code>psycopg2-binary</code> package, not the standard <code>psycopg2</code> package</li>
 </ul>
 <h2 id="virtual-environment-setup-important">Virtual Environment Setup (Important)<a class="headerlink" href="#virtual-environment-setup-important" title="Permanent link">&para;</a></h2>
-<p>WordNet Porter is designed to run in a Python virtual environment. This isolates the application's dependencies from your system Python installation and prevents conflicts with other packages.</p>
+<p>WordNet DB Migrator is designed to run in a Python virtual environment. This isolates the application's dependencies from your system Python installation and prevents conflicts with other packages.</p>
 <h3 id="creating-a-virtual-environment">Creating a Virtual Environment<a class="headerlink" href="#creating-a-virtual-environment" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Create a virtual environment</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>wordnet_porter_venv
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>wordnet_db_migrator_venv
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Activate the virtual environment</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># On Windows:</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>wordnet_porter_venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>wordnet_db_migrator_venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># On macOS/Linux:</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">source</span><span class="w"> </span>wordnet_porter_venv/bin/activate
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">source</span><span class="w"> </span>wordnet_db_migrator_venv/bin/activate
 </code></pre></div>
 <p>You should see the virtual environment name in your command prompt, indicating it's active. All subsequent installation commands should be run with the virtual environment activated.</p>
 <h2 id="installation-methods">Installation Methods<a class="headerlink" href="#installation-methods" title="Permanent link">&para;</a></h2>
 <h3 id="method-1-using-pip-recommended">Method 1: Using pip (Recommended)<a class="headerlink" href="#method-1-using-pip-recommended" title="Permanent link">&para;</a></h3>
-<p>The easiest way to install WordNet Porter is using pip within your activated virtual environment:</p>
+<p>The easiest way to install WordNet DB Migrator is using pip within your activated virtual environment:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Make sure your virtual environment is activated</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pip<span class="w"> </span>install<span class="w"> </span>wordnet-porter
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pip<span class="w"> </span>install<span class="w"> </span>wordnet-db-migrator
 </code></pre></div>
 <p>This will install the latest stable version from PyPI, including all required dependencies.</p>
 <h3 id="method-2-from-source">Method 2: From Source<a class="headerlink" href="#method-2-from-source" title="Permanent link">&para;</a></h3>
 <p>To install the latest development version from source:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Clone the repository</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/onareach/wordnet-porter.git
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">cd</span><span class="w"> </span>wordnet-porter
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/onareach/wordnet-db-migrator.git
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">cd</span><span class="w"> </span>wordnet-db-migrator
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Create and activate a virtual environment (if not already done)</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
@@ -717,15 +717,15 @@
 1. Check Python version
 2. Create a virtual environment
 3. Install dependencies
-4. Install WordNet Porter in development mode</p>
+4. Install WordNet DB Migrator in development mode</p>
 <h2 id="important-note-about-dependencies">Important Note About Dependencies<a class="headerlink" href="#important-note-about-dependencies" title="Permanent link">&para;</a></h2>
 <p>This project specifically requires <code>psycopg2-binary</code> and not the standard <code>psycopg2</code> package. Using the standard <code>psycopg2</code> package may cause errors. The correct dependency will be installed automatically when you install the package, but if you're installing dependencies manually, make sure to use:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>psycopg2-binary
 </code></pre></div>
 <h2 id="verifying-installation">Verifying Installation<a class="headerlink" href="#verifying-installation" title="Permanent link">&para;</a></h2>
-<p>To verify that WordNet Porter is installed correctly:</p>
+<p>To verify that WordNet DB Migrator is installed correctly:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Make sure your virtual environment is activated</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>wordnet-porter<span class="w"> </span>--help
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>wordnet-db-migrator<span class="w"> </span>--help
 </code></pre></div>
 <p>This should display the help message with available options.</p>
 <h2 id="troubleshooting-installation">Troubleshooting Installation<a class="headerlink" href="#troubleshooting-installation" title="Permanent link">&para;</a></h2>
@@ -752,14 +752,14 @@
 <li>Ensure you're using Python 3.6 or higher</li>
 </ol>
 <h2 id="installing-wordnet-sqlite-database">Installing WordNet SQLite Database<a class="headerlink" href="#installing-wordnet-sqlite-database" title="Permanent link">&para;</a></h2>
-<p>WordNet Porter requires a WordNet SQLite database to migrate. If you don't have one:</p>
+<p>WordNet DB Migrator requires a WordNet SQLite database to migrate. If you don't have one:</p>
 <ol>
 <li>Download the WordNet database from <a href="https://wordnet.princeton.edu/">WordNet's official website</a></li>
 <li>Follow the instructions to convert it to SQLite format (if necessary)</li>
 <li>Note the path to the SQLite database file</li>
 </ol>
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p>Now that you have installed WordNet Porter, you can proceed to the <a href="../usage/">Usage Guide</a> to learn how to use it.</p>
+<p>Now that you have installed WordNet DB Migrator, you can proceed to the <a href="../usage/">Usage Guide</a> to learn how to use it.</p>
 
 
 

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A utility to migrate WordNet SQLite database to PostgreSQL">
+        <meta name="description" content="A utility to migrate WordNet database from SQLite to PostgreSQL">
       
       
         <meta name="author" content="onareach">
@@ -22,7 +22,7 @@
     
     
       
-        <title>API Reference - WordNet Porter</title>
+        <title>API Reference - WordNet DB Migrator</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="WordNet Porter" class="md-header__button md-logo" aria-label="WordNet Porter" data-md-component="logo">
+    <a href=".." title="WordNet DB Migrator" class="md-header__button md-logo" aria-label="WordNet DB Migrator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            WordNet Porter
+            WordNet DB Migrator
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -167,13 +167,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/onareach/wordnet-porter" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/onareach/wordnet-db-migrator" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    onareach/wordnet-porter
+    onareach/wordnet-db-migrator
   </div>
 </a>
       </div>
@@ -203,23 +203,23 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="WordNet Porter" class="md-nav__button md-logo" aria-label="WordNet Porter" data-md-component="logo">
+    <a href=".." title="WordNet DB Migrator" class="md-nav__button md-logo" aria-label="WordNet DB Migrator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    WordNet Porter
+    WordNet DB Migrator
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/onareach/wordnet-porter" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/onareach/wordnet-db-migrator" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    onareach/wordnet-porter
+    onareach/wordnet-db-migrator
   </div>
 </a>
     </div>
@@ -381,13 +381,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterconfig" class="md-nav__link">
+  <a href="#wordnet_db_migratorconfig" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.config
+      wordnet_db_migrator.config
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.config">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.config">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -444,13 +444,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_portercli" class="md-nav__link">
+  <a href="#wordnet_db_migratorcli" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.cli
+      wordnet_db_migrator.cli
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.cli">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.cli">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -468,13 +468,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_portermain" class="md-nav__link">
+  <a href="#wordnet_db_migratormain" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.main
+      wordnet_db_migrator.main
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.main">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.main">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -492,13 +492,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterbootstrap" class="md-nav__link">
+  <a href="#wordnet_db_migratorbootstrap" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.bootstrap
+      wordnet_db_migrator.bootstrap
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.bootstrap">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.bootstrap">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -531,13 +531,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep010_test_sqlite_connection" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep010_test_sqlite_connection" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step010_test_sqlite_connection
+      wordnet_db_migrator.steps.step010_test_sqlite_connection
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step010_test_sqlite_connection">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step010_test_sqlite_connection">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -555,13 +555,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep020_postgres_credentials" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep020_postgres_credentials" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step020_postgres_credentials
+      wordnet_db_migrator.steps.step020_postgres_credentials
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step020_postgres_credentials">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step020_postgres_credentials">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -579,13 +579,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep030_create_postgres_database" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep030_create_postgres_database" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step030_create_postgres_database
+      wordnet_db_migrator.steps.step030_create_postgres_database
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step030_create_postgres_database">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step030_create_postgres_database">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -603,13 +603,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep035_purge_directories" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep035_purge_directories" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step035_purge_directories
+      wordnet_db_migrator.steps.step035_purge_directories
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step035_purge_directories">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step035_purge_directories">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -627,13 +627,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep040_extract_sqlite_schema" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep040_extract_sqlite_schema" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step040_extract_sqlite_schema
+      wordnet_db_migrator.steps.step040_extract_sqlite_schema
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step040_extract_sqlite_schema">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step040_extract_sqlite_schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -651,13 +651,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep045_analyze_dependencies" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep045_analyze_dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step045_analyze_dependencies
+      wordnet_db_migrator.steps.step045_analyze_dependencies
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step045_analyze_dependencies">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step045_analyze_dependencies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -675,13 +675,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep050_extract_sqlite_metadata" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep050_extract_sqlite_metadata" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step050_extract_sqlite_metadata
+      wordnet_db_migrator.steps.step050_extract_sqlite_metadata
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step050_extract_sqlite_metadata">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step050_extract_sqlite_metadata">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -699,13 +699,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep060_generate_tables" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep060_generate_tables" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step060_generate_tables
+      wordnet_db_migrator.steps.step060_generate_tables
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step060_generate_tables">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step060_generate_tables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -723,13 +723,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep065_generate_foreign_keys" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep065_generate_foreign_keys" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step065_generate_foreign_keys
+      wordnet_db_migrator.steps.step065_generate_foreign_keys
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step065_generate_foreign_keys">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step065_generate_foreign_keys">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -747,13 +747,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep067_generate_foreign_key_validators" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep067_generate_foreign_key_validators" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step067_generate_foreign_key_validators
+      wordnet_db_migrator.steps.step067_generate_foreign_key_validators
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step067_generate_foreign_key_validators">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step067_generate_foreign_key_validators">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -771,13 +771,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep068_generate_indexes" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep068_generate_indexes" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step068_generate_indexes
+      wordnet_db_migrator.steps.step068_generate_indexes
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step068_generate_indexes">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step068_generate_indexes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -795,13 +795,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep070_run_table_scripts" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep070_run_table_scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step070_run_table_scripts
+      wordnet_db_migrator.steps.step070_run_table_scripts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step070_run_table_scripts">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step070_run_table_scripts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -819,13 +819,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep080_run_index_scripts" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep080_run_index_scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step080_run_index_scripts
+      wordnet_db_migrator.steps.step080_run_index_scripts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step080_run_index_scripts">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step080_run_index_scripts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -843,13 +843,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep090_insert_data_tables" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep090_insert_data_tables" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step090_insert_data_tables
+      wordnet_db_migrator.steps.step090_insert_data_tables
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step090_insert_data_tables">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step090_insert_data_tables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -867,13 +867,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep095_validate_foreign_key_data" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep095_validate_foreign_key_data" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step095_validate_foreign_key_data
+      wordnet_db_migrator.steps.step095_validate_foreign_key_data
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step095_validate_foreign_key_data">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step095_validate_foreign_key_data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -891,13 +891,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep100_apply_foreign_keys" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep100_apply_foreign_keys" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step100_apply_foreign_keys
+      wordnet_db_migrator.steps.step100_apply_foreign_keys
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step100_apply_foreign_keys">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step100_apply_foreign_keys">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -930,13 +930,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterutilsdb_utils" class="md-nav__link">
+  <a href="#wordnet_db_migratorutilsdb_utils" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.utils.db_utils
+      wordnet_db_migrator.utils.db_utils
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.utils.db_utils">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.utils.db_utils">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1003,13 +1003,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterconfig" class="md-nav__link">
+  <a href="#wordnet_db_migratorconfig" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.config
+      wordnet_db_migrator.config
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.config">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.config">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1066,13 +1066,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_portercli" class="md-nav__link">
+  <a href="#wordnet_db_migratorcli" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.cli
+      wordnet_db_migrator.cli
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.cli">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.cli">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1090,13 +1090,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_portermain" class="md-nav__link">
+  <a href="#wordnet_db_migratormain" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.main
+      wordnet_db_migrator.main
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.main">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.main">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1114,13 +1114,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterbootstrap" class="md-nav__link">
+  <a href="#wordnet_db_migratorbootstrap" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.bootstrap
+      wordnet_db_migrator.bootstrap
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.bootstrap">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.bootstrap">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1153,13 +1153,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep010_test_sqlite_connection" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep010_test_sqlite_connection" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step010_test_sqlite_connection
+      wordnet_db_migrator.steps.step010_test_sqlite_connection
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step010_test_sqlite_connection">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step010_test_sqlite_connection">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1177,13 +1177,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep020_postgres_credentials" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep020_postgres_credentials" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step020_postgres_credentials
+      wordnet_db_migrator.steps.step020_postgres_credentials
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step020_postgres_credentials">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step020_postgres_credentials">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1201,13 +1201,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep030_create_postgres_database" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep030_create_postgres_database" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step030_create_postgres_database
+      wordnet_db_migrator.steps.step030_create_postgres_database
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step030_create_postgres_database">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step030_create_postgres_database">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1225,13 +1225,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep035_purge_directories" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep035_purge_directories" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step035_purge_directories
+      wordnet_db_migrator.steps.step035_purge_directories
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step035_purge_directories">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step035_purge_directories">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1249,13 +1249,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep040_extract_sqlite_schema" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep040_extract_sqlite_schema" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step040_extract_sqlite_schema
+      wordnet_db_migrator.steps.step040_extract_sqlite_schema
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step040_extract_sqlite_schema">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step040_extract_sqlite_schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1273,13 +1273,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep045_analyze_dependencies" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep045_analyze_dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step045_analyze_dependencies
+      wordnet_db_migrator.steps.step045_analyze_dependencies
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step045_analyze_dependencies">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step045_analyze_dependencies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1297,13 +1297,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep050_extract_sqlite_metadata" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep050_extract_sqlite_metadata" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step050_extract_sqlite_metadata
+      wordnet_db_migrator.steps.step050_extract_sqlite_metadata
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step050_extract_sqlite_metadata">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step050_extract_sqlite_metadata">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1321,13 +1321,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep060_generate_tables" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep060_generate_tables" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step060_generate_tables
+      wordnet_db_migrator.steps.step060_generate_tables
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step060_generate_tables">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step060_generate_tables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1345,13 +1345,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep065_generate_foreign_keys" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep065_generate_foreign_keys" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step065_generate_foreign_keys
+      wordnet_db_migrator.steps.step065_generate_foreign_keys
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step065_generate_foreign_keys">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step065_generate_foreign_keys">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1369,13 +1369,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep067_generate_foreign_key_validators" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep067_generate_foreign_key_validators" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step067_generate_foreign_key_validators
+      wordnet_db_migrator.steps.step067_generate_foreign_key_validators
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step067_generate_foreign_key_validators">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step067_generate_foreign_key_validators">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1393,13 +1393,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep068_generate_indexes" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep068_generate_indexes" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step068_generate_indexes
+      wordnet_db_migrator.steps.step068_generate_indexes
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step068_generate_indexes">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step068_generate_indexes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1417,13 +1417,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep070_run_table_scripts" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep070_run_table_scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step070_run_table_scripts
+      wordnet_db_migrator.steps.step070_run_table_scripts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step070_run_table_scripts">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step070_run_table_scripts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1441,13 +1441,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep080_run_index_scripts" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep080_run_index_scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step080_run_index_scripts
+      wordnet_db_migrator.steps.step080_run_index_scripts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step080_run_index_scripts">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step080_run_index_scripts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1465,13 +1465,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep090_insert_data_tables" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep090_insert_data_tables" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step090_insert_data_tables
+      wordnet_db_migrator.steps.step090_insert_data_tables
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step090_insert_data_tables">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step090_insert_data_tables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1489,13 +1489,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep095_validate_foreign_key_data" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep095_validate_foreign_key_data" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step095_validate_foreign_key_data
+      wordnet_db_migrator.steps.step095_validate_foreign_key_data
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step095_validate_foreign_key_data">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step095_validate_foreign_key_data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1513,13 +1513,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterstepsstep100_apply_foreign_keys" class="md-nav__link">
+  <a href="#wordnet_db_migratorstepsstep100_apply_foreign_keys" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.steps.step100_apply_foreign_keys
+      wordnet_db_migrator.steps.step100_apply_foreign_keys
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.steps.step100_apply_foreign_keys">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.steps.step100_apply_foreign_keys">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1552,13 +1552,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wordnet_porterutilsdb_utils" class="md-nav__link">
+  <a href="#wordnet_db_migratorutilsdb_utils" class="md-nav__link">
     <span class="md-ellipsis">
-      wordnet_porter.utils.db_utils
+      wordnet_db_migrator.utils.db_utils
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="wordnet_porter.utils.db_utils">
+    <nav class="md-nav" aria-label="wordnet_db_migrator.utils.db_utils">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1600,13 +1600,13 @@
 
 
 <h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
-<p>This document provides a reference for the WordNet Porter API.</p>
+<p>This document provides a reference for the WordNet DB Migrator API.</p>
 <h2 id="main-modules">Main Modules<a class="headerlink" href="#main-modules" title="Permanent link">&para;</a></h2>
-<h3 id="wordnet_porterconfig">wordnet_porter.config<a class="headerlink" href="#wordnet_porterconfig" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorconfig">wordnet_db_migrator.config<a class="headerlink" href="#wordnet_db_migratorconfig" title="Permanent link">&para;</a></h3>
 <p>The configuration module handles loading and managing configuration settings.</p>
 <h4 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h4>
 <h5 id="config"><code>Config</code><a class="headerlink" href="#config" title="Permanent link">&para;</a></h5>
-<p>The main configuration class for WordNet Porter.</p>
+<p>The main configuration class for WordNet DB Migrator.</p>
 <h6 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h6>
 <ul>
 <li><code>__init__()</code>: Initialize configuration with default values and load from files.</li>
@@ -1633,7 +1633,7 @@
 <li><code>BATCH_SIZE</code>: Get/set batch size.</li>
 <li><code>force_mode</code>: Get/set force mode setting.</li>
 </ul>
-<h3 id="wordnet_portercli">wordnet_porter.cli<a class="headerlink" href="#wordnet_portercli" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorcli">wordnet_db_migrator.cli<a class="headerlink" href="#wordnet_db_migratorcli" title="Permanent link">&para;</a></h3>
 <p>The command-line interface module handles command-line argument parsing and validation.</p>
 <h4 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h4>
 <ul>
@@ -1641,121 +1641,121 @@
 <li><code>validate_cli_args()</code>: Validate command-line arguments.</li>
 <li><code>parse_cli_args(all_steps)</code>: Parse command-line arguments and determine which steps to run.</li>
 </ul>
-<h3 id="wordnet_portermain">wordnet_porter.main<a class="headerlink" href="#wordnet_portermain" title="Permanent link">&para;</a></h3>
-<p>The main module coordinates the step-by-step process of migrating a WordNet SQLite database to PostgreSQL.</p>
+<h3 id="wordnet_db_migratormain">wordnet_db_migrator.main<a class="headerlink" href="#wordnet_db_migratormain" title="Permanent link">&para;</a></h3>
+<p>The main module coordinates the step-by-step process of migrating a WordNet database from SQLite to PostgreSQL.</p>
 <h4 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>main()</code>: Main function to coordinate the WordNet migration process.</li>
 </ul>
-<h3 id="wordnet_porterbootstrap">wordnet_porter.bootstrap<a class="headerlink" href="#wordnet_porterbootstrap" title="Permanent link">&para;</a></h3>
-<p>The bootstrap module handles setting up the environment for the WordNet Porter application.</p>
+<h3 id="wordnet_db_migratorbootstrap">wordnet_db_migrator.bootstrap<a class="headerlink" href="#wordnet_db_migratorbootstrap" title="Permanent link">&para;</a></h3>
+<p>The bootstrap module handles setting up the environment for the WordNet DB Migrator application.</p>
 <h4 id="functions_2">Functions<a class="headerlink" href="#functions_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>setup()</code>: Set up the environment for the WordNet Porter application.</li>
+<li><code>setup()</code>: Set up the environment for the WordNet DB Migrator application.</li>
 <li><code>print_header(message)</code>: Print a header message.</li>
 </ul>
 <h2 id="step-modules">Step Modules<a class="headerlink" href="#step-modules" title="Permanent link">&para;</a></h2>
 <p>Each step in the migration process is implemented as a separate module in the <code>steps</code> directory.</p>
-<h3 id="wordnet_porterstepsstep010_test_sqlite_connection">wordnet_porter.steps.step010_test_sqlite_connection<a class="headerlink" href="#wordnet_porterstepsstep010_test_sqlite_connection" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep010_test_sqlite_connection">wordnet_db_migrator.steps.step010_test_sqlite_connection<a class="headerlink" href="#wordnet_db_migratorstepsstep010_test_sqlite_connection" title="Permanent link">&para;</a></h3>
 <p>Tests the connection to the SQLite database.</p>
 <h4 id="functions_3">Functions<a class="headerlink" href="#functions_3" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to test the SQLite database connection.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep020_postgres_credentials">wordnet_porter.steps.step020_postgres_credentials<a class="headerlink" href="#wordnet_porterstepsstep020_postgres_credentials" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep020_postgres_credentials">wordnet_db_migrator.steps.step020_postgres_credentials<a class="headerlink" href="#wordnet_db_migratorstepsstep020_postgres_credentials" title="Permanent link">&para;</a></h3>
 <p>Sets up PostgreSQL credentials.</p>
 <h4 id="functions_4">Functions<a class="headerlink" href="#functions_4" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to set up PostgreSQL credentials.</li>
 <li><code>get_credentials()</code>: Get PostgreSQL credentials from the user.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep030_create_postgres_database">wordnet_porter.steps.step030_create_postgres_database<a class="headerlink" href="#wordnet_porterstepsstep030_create_postgres_database" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep030_create_postgres_database">wordnet_db_migrator.steps.step030_create_postgres_database<a class="headerlink" href="#wordnet_db_migratorstepsstep030_create_postgres_database" title="Permanent link">&para;</a></h3>
 <p>Creates the WordNet database in PostgreSQL.</p>
 <h4 id="functions_5">Functions<a class="headerlink" href="#functions_5" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to create the PostgreSQL database.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep035_purge_directories">wordnet_porter.steps.step035_purge_directories<a class="headerlink" href="#wordnet_porterstepsstep035_purge_directories" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep035_purge_directories">wordnet_db_migrator.steps.step035_purge_directories<a class="headerlink" href="#wordnet_db_migratorstepsstep035_purge_directories" title="Permanent link">&para;</a></h3>
 <p>Purges output directories if needed.</p>
 <h4 id="functions_6">Functions<a class="headerlink" href="#functions_6" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to purge directories.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep040_extract_sqlite_schema">wordnet_porter.steps.step040_extract_sqlite_schema<a class="headerlink" href="#wordnet_porterstepsstep040_extract_sqlite_schema" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep040_extract_sqlite_schema">wordnet_db_migrator.steps.step040_extract_sqlite_schema<a class="headerlink" href="#wordnet_db_migratorstepsstep040_extract_sqlite_schema" title="Permanent link">&para;</a></h3>
 <p>Extracts the schema from the SQLite database.</p>
 <h4 id="functions_7">Functions<a class="headerlink" href="#functions_7" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to extract the SQLite schema.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep045_analyze_dependencies">wordnet_porter.steps.step045_analyze_dependencies<a class="headerlink" href="#wordnet_porterstepsstep045_analyze_dependencies" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep045_analyze_dependencies">wordnet_db_migrator.steps.step045_analyze_dependencies<a class="headerlink" href="#wordnet_db_migratorstepsstep045_analyze_dependencies" title="Permanent link">&para;</a></h3>
 <p>Analyzes table dependencies.</p>
 <h4 id="functions_8">Functions<a class="headerlink" href="#functions_8" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to analyze dependencies.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep050_extract_sqlite_metadata">wordnet_porter.steps.step050_extract_sqlite_metadata<a class="headerlink" href="#wordnet_porterstepsstep050_extract_sqlite_metadata" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep050_extract_sqlite_metadata">wordnet_db_migrator.steps.step050_extract_sqlite_metadata<a class="headerlink" href="#wordnet_db_migratorstepsstep050_extract_sqlite_metadata" title="Permanent link">&para;</a></h3>
 <p>Extracts metadata from the SQLite database.</p>
 <h4 id="functions_9">Functions<a class="headerlink" href="#functions_9" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to extract SQLite metadata.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep060_generate_tables">wordnet_porter.steps.step060_generate_tables<a class="headerlink" href="#wordnet_porterstepsstep060_generate_tables" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep060_generate_tables">wordnet_db_migrator.steps.step060_generate_tables<a class="headerlink" href="#wordnet_db_migratorstepsstep060_generate_tables" title="Permanent link">&para;</a></h3>
 <p>Generates table creation scripts.</p>
 <h4 id="functions_10">Functions<a class="headerlink" href="#functions_10" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to generate table scripts.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep065_generate_foreign_keys">wordnet_porter.steps.step065_generate_foreign_keys<a class="headerlink" href="#wordnet_porterstepsstep065_generate_foreign_keys" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep065_generate_foreign_keys">wordnet_db_migrator.steps.step065_generate_foreign_keys<a class="headerlink" href="#wordnet_db_migratorstepsstep065_generate_foreign_keys" title="Permanent link">&para;</a></h3>
 <p>Generates foreign key creation scripts.</p>
 <h4 id="functions_11">Functions<a class="headerlink" href="#functions_11" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to generate foreign key scripts.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep067_generate_foreign_key_validators">wordnet_porter.steps.step067_generate_foreign_key_validators<a class="headerlink" href="#wordnet_porterstepsstep067_generate_foreign_key_validators" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep067_generate_foreign_key_validators">wordnet_db_migrator.steps.step067_generate_foreign_key_validators<a class="headerlink" href="#wordnet_db_migratorstepsstep067_generate_foreign_key_validators" title="Permanent link">&para;</a></h3>
 <p>Generates foreign key validator scripts.</p>
 <h4 id="functions_12">Functions<a class="headerlink" href="#functions_12" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to generate foreign key validators.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep068_generate_indexes">wordnet_porter.steps.step068_generate_indexes<a class="headerlink" href="#wordnet_porterstepsstep068_generate_indexes" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep068_generate_indexes">wordnet_db_migrator.steps.step068_generate_indexes<a class="headerlink" href="#wordnet_db_migratorstepsstep068_generate_indexes" title="Permanent link">&para;</a></h3>
 <p>Generates index creation scripts.</p>
 <h4 id="functions_13">Functions<a class="headerlink" href="#functions_13" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to generate index scripts.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep070_run_table_scripts">wordnet_porter.steps.step070_run_table_scripts<a class="headerlink" href="#wordnet_porterstepsstep070_run_table_scripts" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep070_run_table_scripts">wordnet_db_migrator.steps.step070_run_table_scripts<a class="headerlink" href="#wordnet_db_migratorstepsstep070_run_table_scripts" title="Permanent link">&para;</a></h3>
 <p>Runs table creation scripts.</p>
 <h4 id="functions_14">Functions<a class="headerlink" href="#functions_14" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to execute table creation scripts.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep080_run_index_scripts">wordnet_porter.steps.step080_run_index_scripts<a class="headerlink" href="#wordnet_porterstepsstep080_run_index_scripts" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep080_run_index_scripts">wordnet_db_migrator.steps.step080_run_index_scripts<a class="headerlink" href="#wordnet_db_migratorstepsstep080_run_index_scripts" title="Permanent link">&para;</a></h3>
 <p>Runs index creation scripts.</p>
 <h4 id="functions_15">Functions<a class="headerlink" href="#functions_15" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to execute index creation scripts.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep090_insert_data_tables">wordnet_porter.steps.step090_insert_data_tables<a class="headerlink" href="#wordnet_porterstepsstep090_insert_data_tables" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep090_insert_data_tables">wordnet_db_migrator.steps.step090_insert_data_tables<a class="headerlink" href="#wordnet_db_migratorstepsstep090_insert_data_tables" title="Permanent link">&para;</a></h3>
 <p>Inserts data into tables.</p>
 <h4 id="functions_16">Functions<a class="headerlink" href="#functions_16" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to insert data into tables.</li>
 <li><code>list_tables()</code>: List all tables that can be inserted.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep095_validate_foreign_key_data">wordnet_porter.steps.step095_validate_foreign_key_data<a class="headerlink" href="#wordnet_porterstepsstep095_validate_foreign_key_data" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep095_validate_foreign_key_data">wordnet_db_migrator.steps.step095_validate_foreign_key_data<a class="headerlink" href="#wordnet_db_migratorstepsstep095_validate_foreign_key_data" title="Permanent link">&para;</a></h3>
 <p>Validates foreign key data.</p>
 <h4 id="functions_17">Functions<a class="headerlink" href="#functions_17" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to validate foreign key data.</li>
 </ul>
-<h3 id="wordnet_porterstepsstep100_apply_foreign_keys">wordnet_porter.steps.step100_apply_foreign_keys<a class="headerlink" href="#wordnet_porterstepsstep100_apply_foreign_keys" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorstepsstep100_apply_foreign_keys">wordnet_db_migrator.steps.step100_apply_foreign_keys<a class="headerlink" href="#wordnet_db_migratorstepsstep100_apply_foreign_keys" title="Permanent link">&para;</a></h3>
 <p>Applies foreign keys.</p>
 <h4 id="functions_18">Functions<a class="headerlink" href="#functions_18" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>run()</code>: Run the step to apply foreign keys.</li>
 </ul>
 <h2 id="utility-modules">Utility Modules<a class="headerlink" href="#utility-modules" title="Permanent link">&para;</a></h2>
-<h3 id="wordnet_porterutilsdb_utils">wordnet_porter.utils.db_utils<a class="headerlink" href="#wordnet_porterutilsdb_utils" title="Permanent link">&para;</a></h3>
+<h3 id="wordnet_db_migratorutilsdb_utils">wordnet_db_migrator.utils.db_utils<a class="headerlink" href="#wordnet_db_migratorutilsdb_utils" title="Permanent link">&para;</a></h3>
 <p>Utility functions for database operations.</p>
 <h4 id="functions_19">Functions<a class="headerlink" href="#functions_19" title="Permanent link">&para;</a></h4>
 <ul>

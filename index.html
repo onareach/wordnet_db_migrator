@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A utility to migrate WordNet SQLite database to PostgreSQL">
+        <meta name="description" content="A utility to migrate WordNet database from SQLite to PostgreSQL">
       
       
         <meta name="author" content="onareach">
@@ -22,7 +22,7 @@
     
     
       
-        <title>WordNet Porter</title>
+        <title>WordNet DB Migrator</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wordnet-porter" class="md-skip">
+        <a href="#wordnet-db-migrator" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="WordNet Porter" class="md-header__button md-logo" aria-label="WordNet Porter" data-md-component="logo">
+    <a href="." title="WordNet DB Migrator" class="md-header__button md-logo" aria-label="WordNet DB Migrator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            WordNet Porter
+            WordNet DB Migrator
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -167,13 +167,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/onareach/wordnet-porter" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/onareach/wordnet-db-migrator" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    onareach/wordnet-porter
+    onareach/wordnet-db-migrator
   </div>
 </a>
       </div>
@@ -203,23 +203,23 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="WordNet Porter" class="md-nav__button md-logo" aria-label="WordNet Porter" data-md-component="logo">
+    <a href="." title="WordNet DB Migrator" class="md-nav__button md-logo" aria-label="WordNet DB Migrator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    WordNet Porter
+    WordNet DB Migrator
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/onareach/wordnet-porter" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/onareach/wordnet-db-migrator" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    onareach/wordnet-porter
+    onareach/wordnet-db-migrator
   </div>
 </a>
     </div>
@@ -513,10 +513,10 @@
   
 
 
-<h1 id="wordnet-porter">WordNet Porter<a class="headerlink" href="#wordnet-porter" title="Permanent link">&para;</a></h1>
-<p>A utility to migrate WordNet SQLite database to PostgreSQL.</p>
+<h1 id="wordnet-db-migrator">WordNet DB Migrator<a class="headerlink" href="#wordnet-db-migrator" title="Permanent link">&para;</a></h1>
+<p>A utility to migrate WordNet database from SQLite to PostgreSQL.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>WordNet Porter is a tool designed to help you migrate a WordNet database from SQLite to PostgreSQL. It handles the entire migration process, including:</p>
+<p>WordNet DB Migrator is a tool designed to help you migrate a WordNet database from SQLite to PostgreSQL. It handles the entire migration process, including:</p>
 <ul>
 <li>Extracting the schema from the SQLite database</li>
 <li>Creating tables in PostgreSQL</li>
@@ -533,17 +533,17 @@
 </ul>
 <h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Install the package</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>wordnet-porter
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>wordnet-db-migrator
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Run the migration</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>wordnet-porter<span class="w"> </span>--sqlite-path<span class="w"> </span>/path/to/wordnet.db
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>wordnet-db-migrator<span class="w"> </span>--sqlite-path<span class="w"> </span>/path/to/wordnet.db
 </code></pre></div>
 <p>For more detailed instructions, see the <a href="installation/">Installation</a> and <a href="usage/">Usage</a> guides.</p>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="installation/">Installation Guide</a>: How to install WordNet Porter</li>
-<li><a href="usage/">Usage Guide</a>: How to use WordNet Porter</li>
-<li><a href="development/">Development Guide</a>: How to contribute to WordNet Porter</li>
+<li><a href="installation/">Installation Guide</a>: How to install WordNet DB Migrator</li>
+<li><a href="usage/">Usage Guide</a>: How to use WordNet DB Migrator</li>
+<li><a href="development/">Development Guide</a>: How to contribute to WordNet DB Migrator</li>
 <li><a href="api_reference/">API Reference</a>: Detailed API documentation</li>
 </ul>
 <h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
