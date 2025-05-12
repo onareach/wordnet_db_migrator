@@ -278,3 +278,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - WordNet for providing the lexical database
 - The PostgreSQL team for their excellent database system
 - All contributors who have helped with the development of this tool
+
+See [ATTRIBUTIONS.md](ATTRIBUTIONS.md) for detailed information about WordNet licensing and proper citation.
